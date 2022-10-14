@@ -1,0 +1,35 @@
+Source: node-jsprim
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs (>= 0.9.57~)
+ , node-assert-plus <!nocheck>
+ , node-extsprintf <!nocheck>
+ , node-json-schema <!nocheck>
+ , node-verror <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-jsprim
+Vcs-Git: https://salsa.debian.org/js-team/node-jsprim.git
+Homepage: https://github.com/joyent/node-jsprim
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-jsprim
+Architecture: all
+Depends: ${misc:Depends}
+ , node-assert-plus
+ , node-extsprintf
+ , node-json-schema
+ , node-verror
+Description: utilities for primitive JavaScript types
+ This module provides miscellaneous facilities for working with strings,
+ numbers, dates, and objects and arrays of these basic types.
+ .
+ This library is a dependency for webpack. Webpack takes code targeted at
+ node.js and makes it run in the browser. Node.js comes with API of its own
+ that is not available in the browsers. Webpack exposes this code
+ to programs that are unaware they are running in a browser.
+ .
+ Node.js is an event-based server-side JavaScript engine.

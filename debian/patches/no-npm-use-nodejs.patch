@@ -1,0 +1,32 @@
+Description: No npm use nodejs
+--- a/Makefile
++++ b/Makefile
+@@ -23,18 +23,18 @@
+ 
+ .PHONY: all
+ all:
+-	$(NPM) install
++#	$(NPM) install
+ 
+ .PHONY: test
+ test:
+-	node test/basic.js
+-	node test/validate.js
+-	node test/hrtimediff.js
+-	node test/hrtimesecs.js
+-	node test/hrtimeadd.js
+-	node test/extraprops.js
+-	node test/merge.js
+-	node test/parse-integer.js
++	nodejs test/basic.js
++	nodejs test/validate.js
++	nodejs test/hrtimediff.js
++	nodejs test/hrtimesecs.js
++	nodejs test/hrtimeadd.js
++	nodejs test/extraprops.js
++	nodejs test/merge.js
++	nodejs test/parse-integer.js
+ 	@echo tests okay
+ 
+-include ./Makefile.targ
++#include ./Makefile.targ
